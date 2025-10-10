@@ -263,7 +263,7 @@ function getCube(num) {
  */
 function getFibonacciNumber(index) {
   const fibonacciSeq = [];
-  for (let i = 0; i <= index; i++) {
+  for (let i = 0; i <= index; i += 1) {
     if (i === 0) {
       fibonacciSeq.push(0);
     } else if (i === 1) {
@@ -288,7 +288,7 @@ function getFibonacciNumber(index) {
  */
 function getSumToN(n) {
   let sum = 0;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n; i += 1) {
     sum += i;
   }
   return sum;
