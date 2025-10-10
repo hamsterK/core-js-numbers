@@ -263,7 +263,7 @@ function getCube(num) {
  */
 function getFibonacciNumber(index) {
   const fibonacciSeq = [];
-  for (let i = 0; i <= index; i += 1) {
+  for (let i = 0; i <= index; i++) {
     if (i === 0) {
       fibonacciSeq.push(0);
     } else if (i === 1) {
@@ -288,7 +288,7 @@ function getFibonacciNumber(index) {
  */
 function getSumToN(n) {
   let sum = 0;
-  for (let i = 1; i <= n; i += 1) {
+  for (let i = 1; i <= n; i++) {
     sum += i;
   }
   return sum;
@@ -323,8 +323,13 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  let number = num;
+  if (number < 1) return false;
+  while (number % 2 === 0) {
+    number /= 2;
+  }
+  return number === 1;
 }
 
 /**
@@ -337,8 +342,8 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
@@ -352,8 +357,8 @@ function getSine(/* num */) {
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-function numberToStringInBase(/* number, base */) {
-  throw new Error('Not implemented');
+function numberToStringInBase(number, base) {
+  return parseInt(number, 10).toString(base);
 }
 
 /**
@@ -366,8 +371,8 @@ function numberToStringInBase(/* number, base */) {
  * @example:
  * 12345, 2    => '1.23e+4'
  */
-function toExponential(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+function toExponential(number, fractionDigits) {
+  return number.toExponential(fractionDigits);
 }
 
 /**

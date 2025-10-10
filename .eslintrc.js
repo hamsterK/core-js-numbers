@@ -15,4 +15,7 @@ module.exports = {
     ecmaVersion: 2024,
   },
   noInlineConfig: true,
+  rules: {
+    'no-plusplus': 'off',
+  },
 };
